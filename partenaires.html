@@ -11,6 +11,7 @@
     <!-- Material Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="icon" href="img/icon.png">
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <!-- Custom CSS -->
     <style>
         .navbar {
@@ -21,10 +22,11 @@
             color: #ebebeb;
         }
 
-        .card-image img{
-            object-fit: cover;
+        .card-image img {
+            object-fit: contain;
             height: 300px;
             min-width: 100px;
+            padding: 0 10px 0 10px;
         }
     </style>
 </head>
@@ -52,13 +54,66 @@
     </ul>
 
     <div class="container">
-        <h1 class="center-align">Nos partenaires</h1>
+        <h1 class="center-align">Partenaires</h5>
+            <div class="row">
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/partenaires/cinema.jpg" alt="cinéma">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Opéraims</span>
+                            <p>Le cinéma est le premier à nous avoir tendu la main. Grâce à cette collaboration, nous
+                                pouvons vous vendre des places de cinéma pour presque rien ! De plus, ça commence très
+                                bientôt...</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="blue-text text-lighten-1">Opéraims.fr</a>
+                            <a href="#" class="pink-text text-lighten-1"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/partenaires/laser.png" alt="laser game">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Laser Game Evolution</span>
+                            <p>Nous sommes très fier de cette collaboration. A l'aide du Laser Game Evolution, nous
+                                pouvons vous proposer des soirées Laser Game, Karaoké, Fléchettes et Cornhole, et ce
+                                dans les meilleurs conditions pour un petit tarif. Notre première soirée est d'ailleurs
+                                en préparation...</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="blue-text text-lighten-1">lasergame-evolution.com</a>
+                            <a href="#" class="pink-text text-lighten-1"></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col s12 m6">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="img/partenaires/sublim.png" alt="sublim">
+                        </div>
+                        <div class="card-content">
+                            <span class="card-title">Sublim'Brodeurs</span>
+                            <p>Entreprise locale de broderie, qui nous permet d'ailleurs de vous proposer des sweats et
+                                t-shirts brodées.</p>
+                        </div>
+                        <div class="card-action">
+                            <a href="#" class="blue-text text-lighten-1">sublimbrodeurs.com</a>
+                            <a href="#" class="pink-text text-lighten-1"></a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
     </div>
-    
+
 
 </body>
-
-</html>
 
 <footer class="page-footer" style="background-color: #191919;">
     <div class="container">
@@ -93,6 +148,9 @@
     document.addEventListener('DOMContentLoaded', function () {
         var elems = document.querySelectorAll('.sidenav');
         var instances = M.Sidenav.init(elems);
+    });
+    $(document).ready(function () {
+        $('.collapsible').collapsible();
     });
 </script>
 </body>
